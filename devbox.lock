@@ -6,6 +6,11 @@
       "resolved": "github:NixOS/nixpkgs/8d4d822bc0efa9de6eddc79cb0d82897a9baa750#buf",
       "version": "1.19.0"
     },
+    "colima@latest": {
+      "last_modified": "2023-05-25T03:54:59Z",
+      "resolved": "github:NixOS/nixpkgs/8d4d822bc0efa9de6eddc79cb0d82897a9baa750#colima",
+      "version": "0.5.5"
+    },
     "docker@latest": {
       "last_modified": "2023-05-25T03:54:59Z",
       "resolved": "github:NixOS/nixpkgs/8d4d822bc0efa9de6eddc79cb0d82897a9baa750#docker",

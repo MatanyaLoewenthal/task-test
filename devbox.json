@@ -11,11 +11,14 @@
     "k9s@latest",
     "kubectx@latest",
     "stern@latest",
-    "buf@latest"
+    "buf@latest",
+    "colima@latest"
   ],
   "shell": {
     "init_hook": [
-      "export \"GOROOT=$(go env GOROOT)\""
+      "export \"GOROOT=$(go env GOROOT)\"",
+      "colima start",
+      "docker buildx create --use"
     ]
   }
 }
