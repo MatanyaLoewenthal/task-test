@@ -1,0 +1,19 @@
+version: '3'
+
+tasks:
+  default:
+    deps: [ci-lint, ci-test, ci-build]
+
+  ci-lint:
+    cmds:
+      - task: :lint
+  ci-test:
+    cmds:
+      - task: :test
+  ci-build:
+    cmds:
+      - task: :build:docker
+  ci-helm-lint:
+    cmds:
+      - task: :helm:lint
+      

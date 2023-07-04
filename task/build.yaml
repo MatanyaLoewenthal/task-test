@@ -1,0 +1,16 @@
+version: '3'
+
+tasks:
+  docker:
+    vars:
+      IMAGE_NAME: "{{.REGISTRY}}/{{.PROJECT_NAME}}"
+    cmds:
+      - docker buildx build . --push --tag {{.IMAGE_NAME}}
+        --cache-to type=registry,ref={{.IMAGE_NAME}}:cache 
+        --cache-from type=registry,ref={{.IMAGE_NAME}}:cache
+        --cache-to type=local,dest=.cache
+        --cache-from type=local,src=.cache
+
+  go:
+    cmds:
+      - go build -o bin/{{.PROJECT_NAME}} {{.SRC}}

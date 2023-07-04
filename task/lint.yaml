@@ -1,0 +1,24 @@
+version: '3'
+
+tasks:
+  default:
+    deps: [fmt, lint]
+  fmt:
+    deps: [go-fmt]
+  lint:
+    deps: [go-lint, helm-lint]
+  
+  go-fmt:
+    cmds:
+      - go fmt {{.SRC}}
+  go-vet:
+    cmds:
+      - go vet {{.SRC}}
+  go-lint:
+    cmds:
+      - golangci-lint run {{.SRC}}
+  
+  helm-lint:
+    cmds:
+      - task: :helm:lint
+

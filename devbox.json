@@ -1,0 +1,21 @@
+{
+  "packages": [
+    "go_1_20@latest",
+    "go-task@latest",
+    "docker@latest",
+    "golangci-lint@latest",
+    "git@latest",
+    "ripgrep@latest",
+    "kubernetes-helm@latest",
+    "kubectl@latest",
+    "k9s@latest",
+    "kubectx@latest",
+    "stern@latest",
+    "buf@latest"
+  ],
+  "shell": {
+    "init_hook": [
+      "export \"GOROOT=$(go env GOROOT)\""
+    ]
+  }
+}

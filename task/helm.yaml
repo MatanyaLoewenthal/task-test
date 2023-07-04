@@ -1,0 +1,9 @@
+version: '3'
+
+tasks:
+  template:
+    cmds:
+      - helm template {{.PROJECT_NAME}} {{.CHART_SRC}} > {{.MANIFESTS_DEST}}/{{.PROJECT_NAME}}.yaml
+  lint:
+    cmds:
+      - helm lint {{.CHART_SRC}}

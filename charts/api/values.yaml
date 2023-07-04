@@ -1,0 +1,10 @@
+image:
+  repository: matanyal/api
+
+ports:
+  - name: http
+    containerPort: 80
+    protocol: TCP
+
+ingress:
+  enabled: false

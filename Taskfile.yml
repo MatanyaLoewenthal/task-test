@@ -1,0 +1,28 @@
+# https://taskfile.dev
+
+version: '3'
+
+# env: []
+
+vars:
+  SRC: ./src
+  REGISTRY: matanyal #registry.example.com
+  PROJECT_NAME: api
+  CHART_SRC: charts/api
+  MANIFESTS_DEST: manifests
+
+includes:
+  lint: 
+    taskfile: ./task/lint.yaml
+  build: 
+    taskfile: ./task/build.yaml
+  run:
+    taskfile: ./task/run.yaml
+  test: 
+    taskfile: ./task/test.yaml
+  ci:
+    taskfile: ./task/ci.yaml
+  helm:
+    taskfile: ./task/helm.yaml
+  task:
+    taskfile: ./task/task.yaml
